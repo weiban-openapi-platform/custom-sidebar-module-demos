@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+</head>
+
+<body>
+    <button id="getStorageData">getStorageData name</button>
+    <button id="changeCardPropertyHeight">
+        changeCardProperty Height 200
+    </button>
+
+    <button id="addCustomEventListener">
+        addCustomEventListener speak
+    </button>
+
+    <script src="https://assets.weibanzhushou.com/web/we-work-webapp/weiban-client-js-sdk.0.1.876a06f63c3f.js"></script>
+    <script>
+        getStorageData.onclick = function () {
+            wb.getStorageData('session', 'name', function (res) {
+                console.log("about:", res)
+            })
+        }
+        changeCardPropertyHeight.onclick = function () {
+            wb.changeCardProperty('height', 200)
+        }
+
+        addCustomEventListener.onclick = function () {
+            wb.addCustomEventListener('speak', function (res) {
+                console.log('about:', res)
+            })
+        }
+
+    </script>
+</body>
+
+</html>

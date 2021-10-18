@@ -1,0 +1,12 @@
+{
+  "name": "post-message-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "http-server -S"
+  },
+  "dependencies": {
+    "http-server": "^13.0.2"
+  }
+}

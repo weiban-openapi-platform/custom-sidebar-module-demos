@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        h3 {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>刷新页面</h3>
+    <button id="refresh">
+        refresh
+    </button>
+
+    <h3>显示对话框 </h3>
+    <button id="showDialogToast">
+        showDialog toast
+    </button>
+    <button id="showDialogPage">
+        showDialog Page
+    </button>
+    <button id="showDialogDrawer">
+        showDialog Drawer
+    </button>
+
+    <h3>变更卡片属性</h3>
+    <button id="changeCardPropertyVisibility">
+        changeCardProperty Visibility hidden
+    </button>
+    <button id="changeCardPropertyHeight">
+        changeCardProperty Height 200
+    </button>
+    <button id="changeCardPropertyMarginTop">
+        changeCardProperty MarginTop 60
+    </button>
+
+    <h3>数据存取</h3>
+    <button id="setStorageData">
+        setStorageData session name 赵四
+    </button>
+    <button id="getStorageData">
+        getStorageData session name
+    </button>
+
+
+    <h3>自定义事件</h3>
+    <button id="addCustomEventListener">
+        addCustomEventListener speak
+    </button>
+    <button id="sendCustomEvent">
+        sendCustomEvent speak 李三
+    </button>
+    <script src="https://assets.weibanzhushou.com/web/we-work-webapp/weiban-client-js-sdk.0.1.876a06f63c3f.js"></script>
+    <script>
+        refresh.onclick = function () {
+            wb.refresh()
+        }
+
+        showDialogToast.onclick = function () {
+            wb.showDialog('toast', 'success', '我的天')
+        }
+
+        showDialogPage.onclick = function () {
+            wb.showDialog('page', 'http://www.baidu.com')
+        }
+
+        showDialogDrawer.onclick = function () {
+            wb.showDialog('drawer', 'http://www.baidu.com', 400)
+        }
+
+        changeCardPropertyVisibility.onclick = function () {
+            wb.changeCardProperty('visibility', 'hidden')
+        }
+
+        changeCardPropertyHeight.onclick = function () {
+            wb.changeCardProperty('height', 200)
+        }
+
+        changeCardPropertyMarginTop.onclick = function () {
+            wb.changeCardProperty('marginTop', 60)
+        }
+
+        getStorageData.onclick = function () {
+            wb.getStorageData('session', 'name', function (res) {
+                alert(res)
+            })
+        }
+
+        setStorageData.onclick = function () {
+            wb.setStorageData('session', 'name', '22454322')
+        }
+
+        addCustomEventListener.onclick = function () {
+            wb.addCustomEventListener('speak', function (res) {
+                console.log(res)
+            })
+        }
+
+        sendCustomEvent.onclick = function () {
+            wb.sendCustomEvent('speak', '李三')
+        }
+
+    </script>
+</body>
+
+</html>

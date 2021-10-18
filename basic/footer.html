@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+</head>
+
+<body>
+    footer
+    <script src="https://assets.weibanzhushou.com/web/we-work-webapp/weiban-client-js-sdk.0.1.876a06f63c3f.js"></script>
+    <script>
+        window.onload = function () {
+            setTimeout(() => {
+                console.log('action')
+                wb.changeCardProperty('visibility', 'visible')
+            }, 5000);
+
+            wb.getStorageData('session', 'name', function (res) {
+                console.log('footer:', res)
+            })
+        }
+
+    </script>
+</body>
+
+</html>
