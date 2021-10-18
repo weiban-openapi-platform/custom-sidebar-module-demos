@@ -1,2 +1,2 @@
-# Sidebar-module
-侧边栏模块化卡片的示例代码
+# custom-sidebar-module-demos
+侧边栏模块化的示例代码
